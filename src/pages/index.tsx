@@ -1,118 +1,178 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Inter, Merriweather } from 'next/font/google'
+import { Box } from '@/components/Box'
+import { Briefcase, FolderSimple, GitBranch, GithubLogo, NavigationArrow, Star, Circle } from 'phosphor-react'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div className='bg-slate-800 text-slate-400 h-full p-6 grid grid-cols-[21.75rem_1fr] gap-6 '>
+      <aside>
+        <Box>
+          <div className='flex justify-center'>
+            <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-2 border-2 border-green-500 rounded-full' />
+          </div>
+          <h2 className='text-center font-bold'>
+            Wagner Vital
+          </h2>
+          <p className='text-center mb-2'>
+            Estudante
+          </p>
+        </Box>
+        <Box>
+          <ul className='pl-4 pt-2 pb-2'>
+            <li className='flex pb-4'>
+              <NavigationArrow className='text-2xl' />
+              <p className='pl-2'>
+                Brasil
+              </p>
+            </li>
+            <li className='flex pb-4'>
+              <Briefcase className='text-2xl' />
+              <p className='pl-2'>
+                Trabalho
+              </p>
+            </li>
+            <li className='flex'>
+              <GithubLogo className='text-2xl' />
+              <a href='#' className='pl-2'>
+                Github
+              </a>
+            </li>
+          </ul>
+        </Box>
+        <Box>
+          <h2 className='text-xl mb-7 pl-2 font-bold'>Tecnologias</h2>
+          <ul className='flex justify-around mb-2'>
+            <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>ReactJS</li>
+            <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>JavaScript</li>
+            <li className='text-center  text-black bg-rose-300 rounded-3xl py-1 px-4'>NodeJS</li>
+          </ul>
+        </Box>
+        <Box>
+          <h2 className='text-xl mb-7 pl-2 font-bold'>Educação</h2>
+          <ul className='list-disc pl-6'>
+            <li className='mb-2'>
+              <p className='font-bold'>
+                Meu Curso em vídeo
+              </p>
+              <p>
+                12/22 - 23
+              </p>
+
+            </li>
+            <li className='mb-2'>
+              <p className='font-bold'>
+                Rocketseat
+              </p>
+              <p>
+                2/23
+              </p>
+            </li>
+          </ul>
+        </Box>
+      </aside>
+      <main>
+        <Box className='flex justify-between'>
+          <p className='font-bold m-2'>
+            My projects
+          </p>
+          <a href='#' className='m-2'>
+            Veja Todos
           </a>
+        </Box>
+        <div className='grid grid-flow-col gap-4'>
+          <Box className='h-44'>
+            <div className='w-96'>
+              <a href="#">
+                <div className='flex mt-2 ml-4 mb-4'>
+                  <FolderSimple className='text-xl' />
+                  <p className='font-bold ml-2'>My-Onyx</p>
+                </div>
+                <p className='ml-4'>
+                  Consulte os códigos de erro que aparecem no painel do veículo onix
+                </p>
+              </a>
+              <div className='flex justify-between mt-4'>
+                <div className='flex ml-4'>
+                  <a href="#">
+                    <Star className='mt-1' />
+                  </a>
+                  <p>100</p>
+                  <a href="#">
+                    <GitBranch className='ml-4 mt-1' />
+                  </a>
+                  <p>100</p>
+                </div>
+                <div className='flex'>
+                  <Circle size={17} weight='fill' className=' bg-gray-500 text-yellow-400 rounded-full mt-1' />
+                  JavaScript
+                </div>
+              </div>
+            </div>
+          </Box>
+          <Box className='h-44'>
+            <div className='w-96'>
+              <a href="#">
+                <div className='flex mt-2 ml-4 mb-4'>
+                  <FolderSimple className='text-xl' />
+                  <p className='font-bold ml-2'>My-Onyx</p>
+                </div>
+                <p className='ml-4'>
+                  Consulte os códigos de erro que aparecem no painel do veículo onix
+                </p>
+              </a>
+              <div className='flex justify-between mt-4'>
+                <div className='flex ml-4'>
+                  <a href="#">
+                    <Star className='mt-1' />
+                  </a>
+                  <p>100</p>
+                  <a href="#">
+                    <GitBranch className='ml-4 mt-1' />
+                  </a>
+                  <p>100</p>
+                </div>
+                <div className='flex'>
+                  <Circle size={17} weight='fill' className=' bg-gray-500 text-yellow-400 rounded-full mt-1' />
+                  JavaScript
+                </div>
+              </div>
+            </div>
+          </Box>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
+        <a href="#">
+          <Box>
+            <p className='font-bold m-2'>
+              Recent Post
+            </p>
+          </Box>
         </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <Box className='flex'>
+          <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full' />
+          <div>
+            <p className='font-bold mt-4 ml-4'>
+              Erro adb devices no Genymotion e Android Studio (React Native)
+            </p>
+            <p className='ml-5'>
+              2 anos atrás
+            </p>
+            <p className='ml-4 mt-6'>
+              Erro adb devices no Genymotion e Android Studio (React Native)
+            </p>
+            <div className='flex mt-2'>
+              <p className='ml-4'>
+                #react-native
+              </p>
+              <p className='ml-4'>
+                #genimotion
+              </p>
+            </div>
+          </div>
+        </Box>
+      </main>
+    </div>
   )
 }
