@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='bg-slate-800 text-slate-400 h-full p-6 grid grid-cols-[21.75rem_1fr] gap-6 '>
+    <div className='bg-slate-800 text-slate-400 h-full p-6 grid grid-cols-[21.75rem_1fr] gap-6 w-max'>
       <aside>
         <Box>
           <div className='flex justify-center'>
