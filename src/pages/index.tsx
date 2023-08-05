@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className='bg-slate-800 text-slate-400 p-6 grid  xl:grid-cols-[21.75rem_1fr] gap-6 '>
+    <div className='bg-slate-800 text-slate-400 p-6 justify-center md:grid  xl:grid-cols-[21.75rem_1fr] gap-6 min-h-screen'>
       <aside>
         <Box>
           <div className='flex justify-center'>
@@ -85,7 +85,7 @@ export default function Home() {
         </Box>
         <div className='grid xl:grid-flow-col gap-4 '>
           <Box className='h-44'>
-            <div className='w-96'>
+            <div className=''>
               <a href="#">
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
           </Box>
           <Box className='h-44'>
-            <div className='w-96'>
+            <div className=''>
               <a href="#">
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
@@ -152,7 +152,7 @@ export default function Home() {
         </a>
         <Box className='flex'>
           <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full' />
-          <div>
+          <div className=''>
             <p className='font-bold mt-4 ml-4'>
               Erro adb devices no Genymotion e Android Studio (React Native)
             </p>
