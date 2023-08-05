@@ -45,7 +45,7 @@ export default function Home() {
         </Box>
         <Box>
           <h2 className='text-xl mb-7 pl-2 font-bold'>Tecnologias</h2>
-          <ul className='flex justify-around mb-2'>
+          <ul className='block md:flex justify-around mb-2'>
             <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>ReactJS</li>
             <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>JavaScript</li>
             <li className='text-center  text-black bg-rose-300 rounded-3xl py-1 px-4'>NodeJS</li>
@@ -75,7 +75,7 @@ export default function Home() {
         </Box>
       </aside>
       <main>
-        <Box className='flex justify-between'>
+        <Box className='block sm:flex justify-between'>
           <p className='font-bold m-2'>
             My projects
           </p>
@@ -83,8 +83,8 @@ export default function Home() {
             Veja Todos
           </a>
         </Box>
-        <div className='grid xl:grid-flow-col gap-4 '>
-          <Box className='h-44'>
+        <div className=' xl:grid-flow-col gap-4'>
+          <Box className=''>
             <div className=''>
               <a href="#">
                 <div className='flex mt-2 ml-4 mb-4'>
@@ -95,8 +95,8 @@ export default function Home() {
                   Consulte os códigos de erro que aparecem no painel do veículo onix
                 </p>
               </a>
-              <div className='flex justify-between mt-4'>
-                <div className='flex ml-4'>
+              <div className='block sm:flex justify-between mt-4'>
+                <div className='block sm:flex ml-4 '>
                   <a href="#">
                     <Star className='mt-1' />
                   </a>
@@ -113,10 +113,10 @@ export default function Home() {
               </div>
             </div>
           </Box>
-          <Box className='h-44'>
+          <Box className=''>
             <div className=''>
               <a href="#">
-                <div className='flex mt-2 ml-4 mb-4'>
+                <div className='flex mt-2 ml-4 mb-4 w-full'>
                   <FolderSimple className='text-xl' />
                   <p className='font-bold ml-2'>My-Onyx</p>
                 </div>
@@ -150,8 +150,10 @@ export default function Home() {
             </p>
           </Box>
         </a>
-        <Box className='flex'>
-          <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full' />
+        <Box className='block md:flex'>
+          <div className='flex justify-center'>
+            <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full items-center' />
+          </div>
           <div className=''>
             <p className='font-bold mt-4 ml-4'>
               Erro adb devices no Genymotion e Android Studio (React Native)
@@ -162,7 +164,7 @@ export default function Home() {
             <p className='ml-4 mt-6'>
               Erro adb devices no Genymotion e Android Studio (React Native)
             </p>
-            <div className='flex mt-2'>
+            <div className='block md:flex mt-2'>
               <p className='ml-4'>
                 #react-native
               </p>
