@@ -19,6 +19,7 @@ export default function Home() {
   const [user,setUser] = useState({
     name: '',
     avatar: '',
+    github: '',
   })
   
   useEffect (() => {
@@ -28,6 +29,7 @@ export default function Home() {
       setUser({
         name: data.name,
         avatar: data.avatar_url,
+        github: data.html_url,
       })
     })
   }, [])
@@ -63,7 +65,7 @@ export default function Home() {
             </li>
             <li className='flex'>
               <GithubLogo className='text-2xl' />
-              <a href='#' className='pl-2'>
+              <a href={user.github} target='_blank' className='pl-2'>
                 Github
               </a>
             </li>
@@ -109,9 +111,9 @@ export default function Home() {
             Veja Todos
           </a>
         </Box>
-        <div className=' xl:grid-flow-col gap-4'>
-          <Box className=''>
-            <div className=''>
+        <div className=' block xl:flex gap-4'>
+          <Box>
+            <div>
               <a href="#">
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
@@ -139,10 +141,10 @@ export default function Home() {
               </div>
             </div>
           </Box>
-          <Box className=''>
-            <div className=''>
+          <Box>
+            <div>
               <a href="#">
-                <div className='flex mt-2 ml-4 mb-4 w-full'>
+                <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
                   <p className='font-bold ml-2'>My-Onyx</p>
                 </div>
@@ -150,8 +152,8 @@ export default function Home() {
                   Consulte os códigos de erro que aparecem no painel do veículo onix
                 </p>
               </a>
-              <div className='flex justify-between mt-4'>
-                <div className='flex ml-4'>
+              <div className='block sm:flex justify-between mt-4'>
+                <div className='block sm:flex ml-4 '>
                   <a href="#">
                     <Star className='mt-1' />
                   </a>
