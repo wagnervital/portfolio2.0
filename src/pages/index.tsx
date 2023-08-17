@@ -2,20 +2,46 @@ import Image from 'next/image'
 import { Inter, Merriweather } from 'next/font/google'
 import { Box } from '@/components/Box'
 import { Briefcase, FolderSimple, GitBranch, GithubLogo, NavigationArrow, Star, Circle } from 'phosphor-react'
+import { useState, useEffect } from 'react'
+
+const axios = require('axios')
 
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+
+ 
+
 export default function Home() {
+  const api = "https://api.github.com/users/wagnervital"
+
+  const [user,setUser] = useState({
+    name: '',
+    avatar: '',
+  })
+  
+  useEffect (() => {
+    fetch(api)
+    .then( response => response.json())
+    .then( data => {
+      setUser({
+        name: data.name,
+        avatar: data.avatar_url,
+      })
+    })
+  }, [])
+    
+  
   return (
     <div className='bg-slate-800 text-slate-400 p-6 justify-center md:grid  xl:grid-cols-[21.75rem_1fr] gap-6 min-h-screen'>
       <aside>
         <Box>
           <div className='flex justify-center'>
-            <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-2 border-2 border-green-500 rounded-full' />
+            <img src={user.avatar} alt="" className='w-32 h-32 mb-4 mt-2 border-2 border-green-500 rounded-full' />
           </div>
           <h2 className='text-center font-bold'>
-            Wagner Vital
+            {user.name}
           </h2>
           <p className='text-center mb-2'>
             Estudante
@@ -152,7 +178,7 @@ export default function Home() {
         </a>
         <Box className='block md:flex'>
           <div className='flex justify-center'>
-            <img src="https://github.com/wagnervital.png" alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full items-center' />
+            <img src={user.avatar} alt="" className='w-32 h-32 mb-4 mt-4 ml-4 border-2 rounded-full items-center' />
           </div>
           <div className=''>
             <p className='font-bold mt-4 ml-4'>
