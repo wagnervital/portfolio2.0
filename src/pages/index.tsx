@@ -77,7 +77,7 @@ export default function Home() {
           <h2 className='text-xl mb-7 pl-2 font-bold'>Tecnologias</h2>
           <ul className='block md:flex justify-around mb-2'>
             <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>ReactJS</li>
-            <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4'>JavaScript</li>
+            <li className='text-center text-black bg-rose-300 rounded-3xl py-1 px-4 my-4 md:my-0'>JavaScript</li>
             <li className='text-center  text-black bg-rose-300 rounded-3xl py-1 px-4'>NodeJS</li>
           </ul>
         </Box>
