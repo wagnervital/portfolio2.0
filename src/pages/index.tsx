@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter, Merriweather } from 'next/font/google'
 import { Box } from '@/components/Box'
-import { Briefcase, FolderSimple, GitBranch, GithubLogo, NavigationArrow, Star, Circle } from 'phosphor-react'
+import { WhatsappLogo, FolderSimple, GitBranch, GithubLogo, NavigationArrow, Star, Circle } from 'phosphor-react'
 import { useState, useEffect } from 'react'
 
 const axios = require('axios')
@@ -11,30 +11,30 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 
- 
+
 
 export default function Home() {
   const api = "https://api.github.com/users/wagnervital"
 
-  const [user,setUser] = useState({
+  const [user, setUser] = useState({
     name: '',
     avatar: '',
     github: '',
   })
-  
-  useEffect (() => {
+
+  useEffect(() => {
     fetch(api)
-    .then( response => response.json())
-    .then( data => {
-      setUser({
-        name: data.name,
-        avatar: data.avatar_url,
-        github: data.html_url,
+      .then(response => response.json())
+      .then(data => {
+        setUser({
+          name: data.name,
+          avatar: data.avatar_url,
+          github: data.html_url,
+        })
       })
-    })
   }, [])
-    
-  
+
+
   return (
     <div className='bg-slate-800 text-slate-400 p-6 justify-center md:grid  xl:grid-cols-[21.75rem_1fr] gap-6 min-h-screen'>
       <aside>
@@ -58,10 +58,12 @@ export default function Home() {
               </p>
             </li>
             <li className='flex pb-4'>
-              <Briefcase className='text-2xl' />
-              <p className='pl-2'>
-                Trabalho
-              </p>
+              <a href="https://wa.me/5513997681868" target="_blank" rel="noopener noreferrer" className='flex'>
+                <WhatsappLogo className='text-2xl text-green-500' />
+                <p className='pl-2'>
+                  WhatsApp
+                </p>
+              </a>
             </li>
             <li className='flex'>
               <GithubLogo className='text-2xl' />
@@ -114,17 +116,17 @@ export default function Home() {
         <div className=' block xl:flex gap-4'>
           <Box>
             <div>
-              <a href="#">
+              <a href="https://wagnervital.github.io/projeto-social-tree/" target='_blank'>
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
-                  <p className='font-bold ml-2'>My-Onyx</p>
+                  <p className='font-bold ml-2'>Projeto Social Tree</p>
                 </div>
                 <p className='ml-4'>
-                  Consulte os códigos de erro que aparecem no painel do veículo onix
+                  Um projeto feito no começo dos meus estudos nas aulas da Rocketseat
                 </p>
               </a>
               <div className='block sm:flex justify-between mt-4'>
-                <div className='block sm:flex ml-4 '>
+                <div className='flex ml-4 '>
                   <a href="#">
                     <Star className='mt-1' />
                   </a>
@@ -153,7 +155,7 @@ export default function Home() {
                 </p>
               </a>
               <div className='block sm:flex justify-between mt-4'>
-                <div className='block sm:flex ml-4 '>
+              <div className='flex ml-4 '>
                   <a href="#">
                     <Star className='mt-1' />
                   </a>
