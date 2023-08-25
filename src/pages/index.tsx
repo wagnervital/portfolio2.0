@@ -137,7 +137,7 @@ export default function Home() {
                   <p>100</p>
                 </div>
                 <div className='flex'>
-                  <Circle size={17} weight='fill' className=' bg-blue-900 text-yellow-400 rounded-full mt-1' />
+                  <Circle size={17} weight='fill' className=' bg-gray-500 text-blue-900 rounded-full mt-1' />
                   CSS
                 </div>
               </div>
