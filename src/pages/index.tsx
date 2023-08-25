@@ -151,7 +151,7 @@ export default function Home() {
                   <p className='font-bold ml-2'>Challenge RocketNews</p>
                 </div>
                 <p className='ml-4'>
-                  Um desafio dado pela escola Roketseat.
+                  Um desafio dado pela escola Roketseat, para treinar meu HTML e CSS.
                 </p>
               </a>
               <div className='block sm:flex justify-between mt-4'>
