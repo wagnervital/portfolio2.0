@@ -145,13 +145,13 @@ export default function Home() {
           </Box>
           <Box>
             <div>
-              <a href="#">
+              <a href="https://wagnervital.github.io/rocketnews/">
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
-                  <p className='font-bold ml-2'>My-Onyx</p>
+                  <p className='font-bold ml-2'>Challenge RocketNews</p>
                 </div>
                 <p className='ml-4'>
-                  Consulte os códigos de erro que aparecem no painel do veículo onix
+                  Um desafio dado pela escola Roketseat.
                 </p>
               </a>
               <div className='block sm:flex justify-between mt-4'>
