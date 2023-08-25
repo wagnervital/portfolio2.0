@@ -137,15 +137,15 @@ export default function Home() {
                   <p>100</p>
                 </div>
                 <div className='flex'>
-                  <Circle size={17} weight='fill' className=' bg-gray-500 text-yellow-400 rounded-full mt-1' />
-                  JavaScript
+                  <Circle size={17} weight='fill' className=' bg-blue-900 text-yellow-400 rounded-full mt-1' />
+                  CSS
                 </div>
               </div>
             </div>
           </Box>
           <Box>
             <div>
-              <a href="https://wagnervital.github.io/rocketnews/">
+              <a href="https://wagnervital.github.io/rocketnews/" target='_blank'>
                 <div className='flex mt-2 ml-4 mb-4'>
                   <FolderSimple className='text-xl' />
                   <p className='font-bold ml-2'>Challenge RocketNews</p>
@@ -166,8 +166,8 @@ export default function Home() {
                   <p>100</p>
                 </div>
                 <div className='flex'>
-                  <Circle size={17} weight='fill' className=' bg-gray-500 text-yellow-400 rounded-full mt-1' />
-                  JavaScript
+                  <Circle size={17} weight='fill' className=' bg-gray-500 text-orange-500 rounded-full mt-1' />
+                  HTML
                 </div>
               </div>
             </div>
